@@ -5,13 +5,14 @@ import { businessConfig } from '../data/config';
 <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-charcoal-950">
   <!-- Interactive/Decorative Backgrounds -->
   <div class="absolute inset-0 z-0" aria-hidden="true">
-    <!-- Grid Overlay -->
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(212,175,55,0.15),rgba(255,255,255,0))] opacity-40"></div>
-    <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(212,175,55,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(212,175,55,0.02)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+    <!-- Background Image -->
+    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30 select-none pointer-events-none scale-105 animate-[slow-pan_25s_ease_infinite_alternate]" style="background-image: url('/laxmi-narasimha-jewellery/assets/luxury_jewelry_bg.png');"></div>
+    <!-- Dark Scrim and Radial Gold Highlights -->
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(212,175,55,0.25),rgba(10,10,11,0.95))]"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-charcoal-950/70 to-charcoal-950"></div>
     
-    <!-- Animated Glow Blobs -->
-    <div class="absolute top-[20%] left-[10%] w-[30vw] h-[30vw] max-w-[400px] max-h-[400px] rounded-full bg-gold-500/10 blur-[100px] animate-slow-pan"></div>
-    <div class="absolute bottom-[20%] right-[10%] w-[25vw] h-[25vw] max-w-[350px] max-h-[350px] rounded-full bg-gold-400/10 blur-[120px] animate-slow-pan" style="animation-delay: -5s;"></div>
+    <!-- Grid Overlay -->
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(212,175,55,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(212,175,55,0.02)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
   </div>
 
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 w-full">
