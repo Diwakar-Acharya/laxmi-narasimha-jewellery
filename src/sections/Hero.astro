@@ -2,20 +2,17 @@
 import { businessConfig } from '../data/config';
 ---
 
-<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-charcoal-50 dark:bg-charcoal-950 transition-colors duration-300">
+<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-charcoal-950">
   <!-- Interactive/Decorative Backgrounds -->
   <div class="absolute inset-0 z-0" aria-hidden="true">
-    <!-- Light Mode Background Image -->
-    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 select-none pointer-events-none scale-105 animate-[slow-pan_25s_ease_infinite_alternate] dark:hidden" style="background-image: url('/laxmi-narasimha-jewellery/assets/light_jewelry_bg.png');"></div>
-    <!-- Dark Mode Background Image -->
-    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-35 select-none pointer-events-none scale-105 animate-[slow-pan_25s_ease_infinite_alternate] hidden dark:block" style="background-image: url('/laxmi-narasimha-jewellery/assets/luxury_jewelry_bg.png');"></div>
-    
-    <!-- Light / Dark Scrim overlays -->
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(212,175,55,0.25),rgba(250,249,246,0.85))] dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(212,175,55,0.25),rgba(10,10,11,0.95))]"></div>
-    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-charcoal-50/50 dark:via-charcoal-950/70 to-charcoal-50 dark:to-charcoal-950"></div>
+    <!-- Background Image -->
+    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30 select-none pointer-events-none scale-105 animate-[slow-pan_25s_ease_infinite_alternate]" style="background-image: url('/laxmi-narasimha-jewellery/assets/luxury_jewelry_bg.png');"></div>
+    <!-- Dark Scrim and Radial Gold Highlights -->
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(212,175,55,0.25),rgba(10,10,11,0.95))]"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-charcoal-950/70 to-charcoal-950"></div>
     
     <!-- Grid Overlay -->
-    <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(212,175,55,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(212,175,55,0.02)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-40 dark:opacity-100"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(212,175,55,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(212,175,55,0.02)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
   </div>
 
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 w-full">
@@ -24,28 +21,28 @@ import { businessConfig } from '../data/config';
       <div class="lg:col-span-7 text-center lg:text-left space-y-8">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gold-400/30 bg-gold-400/5 backdrop-blur-md">
           <span class="w-1.5 h-1.5 rounded-full bg-gold-400"></span>
-          <span class="text-[10px] tracking-[0.2em] font-semibold text-gold-600 dark:text-gold-300 uppercase">Kharagpur's Premier Jeweller</span>
+          <span class="text-[10px] tracking-[0.2em] font-semibold text-gold-300 uppercase">Kharagpur's Premier Jeweller</span>
         </div>
 
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-charcoal-800 dark:text-white tracking-tight leading-[1.1] md:max-w-2xl lg:max-w-none transition-colors duration-300">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white tracking-tight leading-[1.1] md:max-w-2xl lg:max-w-none">
           Legacy of Purity, <br class="hidden sm:inline" />
           <span class="gold-text-gradient">Masterpieces of Trust</span>
         </h1>
 
-        <p class="text-base sm:text-lg text-charcoal-600 dark:text-charcoal-300 max-w-xl mx-auto lg:mx-0 leading-relaxed font-sans transition-colors duration-300">
+        <p class="text-base sm:text-lg text-charcoal-300 max-w-xl mx-auto lg:mx-0 leading-relaxed font-sans font-medium">
           Handcrafted gold, certified diamonds, and heritage bridal jewelry designed to celebrate your life's timeless milestones.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
           <!-- Primary CTA Button -->
-          <a href="#collections" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-gold-400 hover:bg-gold-300 text-charcoal-950 font-semibold tracking-wider text-xs uppercase transition-all duration-300 transform hover:-translate-y-0.5 shadow-gold-glow cursor-pointer">
+          <a href="#collections" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-gold-400 hover:bg-gold-300 text-charcoal-950 font-semibold tracking-wider text-xs uppercase transition-all duration-300 transform hover:-translate-y-0.5 shadow-gold-glow">
             Explore Collections
             <svg class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
           </a>
           <!-- Secondary CTA Button -->
-          <a href="#location" class="inline-flex items-center justify-center px-8 py-4 rounded-full border border-charcoal-300 dark:border-charcoal-700 bg-white/50 dark:bg-charcoal-900/50 hover:border-gold-400/50 text-charcoal-800 dark:text-white font-semibold tracking-wider text-xs uppercase transition-all duration-300 hover:text-gold-500 dark:hover:text-gold-300 cursor-pointer">
+          <a href="#location" class="inline-flex items-center justify-center px-8 py-4 rounded-full border border-charcoal-750 bg-charcoal-900/50 hover:border-gold-400/50 text-white font-semibold tracking-wider text-xs uppercase transition-all duration-300 hover:text-gold-300">
             Visit Showroom
           </a>
         </div>
@@ -61,9 +58,9 @@ import { businessConfig } from '../data/config';
           <div class="absolute inset-4 rounded-full border-2 border-dashed border-gold-400/10 animate-[spin_60s_linear_infinite]"></div>
           
           <!-- Inner solid ring -->
-          <div class="absolute inset-10 rounded-full border border-gold-400/30 bg-white/80 dark:bg-charcoal-900/60 backdrop-blur-xl flex items-center justify-center transition-colors duration-300">
+          <div class="absolute inset-10 rounded-full border border-gold-400/30 bg-charcoal-900/60 backdrop-blur-xl flex items-center justify-center">
             <!-- Handcrafted Mandalic Jewel Outline SVG -->
-            <svg class="w-32 h-32 text-gold-500 dark:text-gold-400/80 drop-shadow-[0_0_15px_rgba(212,175,55,0.4)]" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.2">
+            <svg class="w-32 h-32 text-gold-400/80 drop-shadow-[0_0_15px_rgba(212,175,55,0.4)]" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.2">
               <circle cx="50" cy="50" r="10" />
               <!-- Petals/Ornaments -->
               <path d="M 50 15 C 53 25, 47 25, 50 15 Z" />
@@ -87,12 +84,12 @@ import { businessConfig } from '../data/config';
           </div>
 
           <!-- Small accent floating star ornaments -->
-          <div class="absolute top-[10%] right-[10%] text-gold-500 dark:text-gold-300 animate-pulse">
+          <div class="absolute top-[10%] right-[10%] text-gold-300 animate-pulse">
             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 1.5l2.6 6.3 6.7 1-4.8 4.7 1.1 6.7-5.6-3-5.6 3 1.1-6.7-4.8-4.7 6.7-1z" />
             </svg>
           </div>
-          <div class="absolute bottom-[10%] left-[10%] text-gold-500 dark:text-gold-300 animate-pulse" style="animation-delay: 2s;">
+          <div class="absolute bottom-[10%] left-[10%] text-gold-300 animate-pulse" style="animation-delay: 2s;">
             <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 1.5l2.6 6.3 6.7 1-4.8 4.7 1.1 6.7-5.6-3-5.6 3 1.1-6.7-4.8-4.7 6.7-1z" />
             </svg>
@@ -104,8 +101,8 @@ import { businessConfig } from '../data/config';
   
   <!-- Wave border separator -->
   <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10" aria-hidden="true">
-    <svg class="relative block w-full h-[60px] text-charcoal-50 dark:text-charcoal-900 transition-colors duration-300" viewBox="0 0 1200 120" preserveAspectRatio="none" fill="currentColor">
-      <path d="M0,0 C150,90 350,120 600,60 C850,0 1050,30 1200,90 L1200,120 L0,120 Z"></path>
+    <svg class="relative block w-full h-[60px]" viewBox="0 0 1200 120" preserveAspectRatio="none" fill="currentColor">
+      <path d="M0,0 C150,90 350,120 600,60 C850,0 1050,30 1200,90 L1200,120 L0,120 Z" class="text-charcoal-900"></path>
     </svg>
   </div>
 </section>

@@ -7,79 +7,54 @@ import { businessConfig } from '../data/config';
     <div class="flex justify-between items-center h-20">
       <!-- Logo / Brand Wordmark -->
       <a href="#" class="flex items-center gap-3 group" aria-label="Sri Laxmi Narasimha Jewellery Home">
-        <div class="w-10 h-10 rounded-full border-2 border-gold-400 flex items-center justify-center bg-charcoal-100 dark:bg-charcoal-900 shadow-gold-glow transition-all duration-300 group-hover:scale-105 group-hover:border-gold-300">
+        <div class="w-10 h-10 rounded-full border-2 border-gold-400 flex items-center justify-center bg-charcoal-900 shadow-gold-glow transition-all duration-300 group-hover:scale-105 group-hover:border-gold-300">
           <span class="font-serif font-semibold text-lg text-gold-400 group-hover:text-gold-300">LN</span>
         </div>
         <div class="flex flex-col">
-          <span class="font-serif font-bold text-sm tracking-widest text-charcoal-800 dark:text-white leading-none sm:text-base">LAXMI NARASIMHA</span>
+          <span class="font-serif font-bold text-sm tracking-widest text-white leading-none sm:text-base">LAXMI NARASIMHA</span>
           <span class="text-[9px] tracking-[0.25em] text-gold-400 font-semibold uppercase leading-tight">Jewellery</span>
         </div>
       </a>
 
       <!-- Desktop Nav Links -->
       <nav class="hidden md:flex items-center gap-8" aria-label="Desktop Navigation">
-        <a href="#hero" class="text-sm font-medium text-charcoal-600 dark:text-charcoal-200 hover:text-charcoal-900 dark:hover:text-white transition-colors duration-200 py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-400 after:transition-all after:duration-300 hover:after:w-full">Home</a>
-        <a href="#about" class="text-sm font-medium text-charcoal-600 dark:text-charcoal-200 hover:text-charcoal-900 dark:hover:text-white transition-colors duration-200 py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-400 after:transition-all after:duration-300 hover:after:w-full">About</a>
-        <a href="#collections" class="text-sm font-medium text-charcoal-600 dark:text-charcoal-200 hover:text-charcoal-900 dark:hover:text-white transition-colors duration-200 py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-400 after:transition-all after:duration-300 hover:after:w-full">Collections</a>
-        <a href="#gallery" class="text-sm font-medium text-charcoal-600 dark:text-charcoal-200 hover:text-charcoal-900 dark:hover:text-white transition-colors duration-200 py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-400 after:transition-all after:duration-300 hover:after:w-full">Gallery</a>
-        <a href="#testimonials" class="text-sm font-medium text-charcoal-600 dark:text-charcoal-200 hover:text-charcoal-900 dark:hover:text-white transition-colors duration-200 py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-400 after:transition-all after:duration-300 hover:after:w-full">Reviews</a>
-        <a href="#location" class="text-sm font-medium text-charcoal-600 dark:text-charcoal-200 hover:text-charcoal-900 dark:hover:text-white transition-colors duration-200 py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-400 after:transition-all after:duration-300 hover:after:w-full">Visit Us</a>
+        <a href="#hero" class="text-sm font-medium text-charcoal-200 hover:text-white transition-colors duration-200 py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-400 after:transition-all after:duration-300 hover:after:w-full">Home</a>
+        <a href="#about" class="text-sm font-medium text-charcoal-200 hover:text-white transition-colors duration-200 py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-400 after:transition-all after:duration-300 hover:after:w-full">About</a>
+        <a href="#collections" class="text-sm font-medium text-charcoal-200 hover:text-white transition-colors duration-200 py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-400 after:transition-all after:duration-300 hover:after:w-full">Collections</a>
+        <a href="#gallery" class="text-sm font-medium text-charcoal-200 hover:text-white transition-colors duration-200 py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-400 after:transition-all after:duration-300 hover:after:w-full">Gallery</a>
+        <a href="#testimonials" class="text-sm font-medium text-charcoal-200 hover:text-white transition-colors duration-200 py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-400 after:transition-all after:duration-300 hover:after:w-full">Reviews</a>
+        <a href="#location" class="text-sm font-medium text-charcoal-200 hover:text-white transition-colors duration-200 py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-400 after:transition-all after:duration-300 hover:after:w-full">Visit Us</a>
       </nav>
 
-      <!-- Desktop Controls & CTA -->
-      <div class="hidden md:flex items-center gap-6">
-        <!-- Theme Toggle button -->
-        <button id="theme-toggle-btn" type="button" class="p-2.5 rounded-full border border-charcoal-200 dark:border-charcoal-800 hover:border-gold-400 text-charcoal-600 dark:text-charcoal-300 hover:text-gold-400 transition-colors focus:outline-none cursor-pointer" aria-label="Toggle theme mode">
-          <!-- Sun Icon (visible in dark mode) -->
-          <svg class="h-4.5 w-4.5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 9H3m15.364-3.636l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707-.707M12 5a7 7 0 100 14 7 7 0 000-14z" />
-          </svg>
-          <!-- Moon Icon (visible in light mode) -->
-          <svg class="h-4.5 w-4.5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-          </svg>
-        </button>
-
+      <!-- Desktop Call To Action -->
+      <div class="hidden md:flex items-center">
         <a href={businessConfig.whatsappLink} target="_blank" rel="noopener noreferrer" class="relative group overflow-hidden px-5 py-2.5 rounded-full border border-gold-400 text-gold-400 text-xs font-semibold uppercase tracking-wider transition-all duration-300 hover:text-charcoal-900">
           <span class="absolute inset-0 bg-gold-400 scale-x-0 origin-right transition-transform duration-300 group-hover:scale-x-100 group-hover:origin-left -z-10"></span>
           Book Consultation
         </a>
       </div>
 
-      <!-- Mobile controls -->
-      <div class="flex items-center gap-3 md:hidden">
-        <!-- Theme Toggle Mobile -->
-        <button id="theme-toggle-btn-mobile" type="button" class="p-2.5 rounded-full border border-charcoal-200 dark:border-charcoal-800 hover:border-gold-400 text-charcoal-600 dark:text-charcoal-300 hover:text-gold-400 transition-colors focus:outline-none cursor-pointer" aria-label="Toggle theme mode">
-          <svg class="h-4.5 w-4.5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 9H3m15.364-3.636l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707-.707M12 5a7 7 0 100 14 7 7 0 000-14z" />
-          </svg>
-          <svg class="h-4.5 w-4.5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-          </svg>
-        </button>
-
-        <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" type="button" class="p-2 text-charcoal-600 dark:text-charcoal-200 hover:text-charcoal-900 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-gold-400 rounded-lg" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle Navigation Menu">
-          <svg id="menu-icon" class="h-6 w-6 block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-          <svg id="close-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" type="button" class="md:hidden p-2 text-charcoal-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-gold-400 rounded-lg" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle Navigation Menu">
+        <svg id="menu-icon" class="h-6 w-6 block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="close-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
     </div>
   </div>
 
   <!-- Mobile Drawer Menu -->
-  <div id="mobile-menu" class="hidden md:hidden border-b border-charcoal-200 dark:border-charcoal-800 bg-white dark:bg-charcoal-950 px-4 pt-2 pb-6 space-y-3 transition-all duration-300 ease-in-out">
-    <a href="#hero" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-charcoal-600 dark:text-charcoal-200 hover:bg-charcoal-100 dark:hover:bg-charcoal-800 hover:text-charcoal-900 dark:hover:text-white">Home</a>
-    <a href="#about" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-charcoal-600 dark:text-charcoal-200 hover:bg-charcoal-100 dark:hover:bg-charcoal-800 hover:text-charcoal-900 dark:hover:text-white">About</a>
-    <a href="#collections" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-charcoal-600 dark:text-charcoal-200 hover:bg-charcoal-100 dark:hover:bg-charcoal-800 hover:text-charcoal-900 dark:hover:text-white">Collections</a>
-    <a href="#gallery" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-charcoal-600 dark:text-charcoal-200 hover:bg-charcoal-100 dark:hover:bg-charcoal-800 hover:text-charcoal-900 dark:hover:text-white">Gallery</a>
-    <a href="#testimonials" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-charcoal-600 dark:text-charcoal-200 hover:bg-charcoal-100 dark:hover:bg-charcoal-800 hover:text-charcoal-900 dark:hover:text-white">Reviews</a>
-    <a href="#location" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-charcoal-600 dark:text-charcoal-200 hover:bg-charcoal-100 dark:hover:bg-charcoal-800 hover:text-charcoal-900 dark:hover:text-white">Visit Us</a>
-    <div class="pt-4 border-t border-charcoal-200 dark:border-charcoal-800">
+  <div id="mobile-menu" class="hidden md:hidden border-b border-charcoal-800 bg-charcoal-950 px-4 pt-2 pb-6 space-y-3 transition-all duration-300 ease-in-out">
+    <a href="#hero" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-charcoal-200 hover:bg-charcoal-800 hover:text-white">Home</a>
+    <a href="#about" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-charcoal-200 hover:bg-charcoal-800 hover:text-white">About</a>
+    <a href="#collections" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-charcoal-200 hover:bg-charcoal-800 hover:text-white">Collections</a>
+    <a href="#gallery" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-charcoal-200 hover:bg-charcoal-800 hover:text-white">Gallery</a>
+    <a href="#testimonials" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-charcoal-200 hover:bg-charcoal-800 hover:text-white">Reviews</a>
+    <a href="#location" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-charcoal-200 hover:bg-charcoal-800 hover:text-white">Visit Us</a>
+    <div class="pt-4 border-t border-charcoal-800">
       <a href={businessConfig.whatsappLink} target="_blank" rel="noopener noreferrer" class="block w-full text-center px-4 py-3 rounded-full bg-gold-400 text-charcoal-900 text-sm font-semibold uppercase tracking-wider hover:bg-gold-300 transition-colors">
         Book Consultation
       </a>
@@ -127,23 +102,5 @@ import { businessConfig } from '../data/config';
       closeIcon?.classList.add('hidden');
       mobileMenuBtn?.setAttribute('aria-expanded', 'false');
     });
-  });
-
-  // Theme toggle actions
-  const toggleBtns = document.querySelectorAll('#theme-toggle-btn, #theme-toggle-btn-mobile');
-  
-  const handleThemeToggle = () => {
-    const isDark = document.documentElement.classList.contains('dark');
-    if (isDark) {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    } else {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    }
-  };
-
-  toggleBtns.forEach(btn => {
-    btn.addEventListener('click', handleThemeToggle);
   });
 </script>

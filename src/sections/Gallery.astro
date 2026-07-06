@@ -45,17 +45,17 @@ const galleryItems = [
 ];
 ---
 
-<section id="gallery" class="py-24 bg-charcoal-50 dark:bg-charcoal-900 transition-colors duration-300 relative">
+<section id="gallery" class="py-24 bg-charcoal-900 relative">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <!-- Header -->
     <div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
       <div class="space-y-4">
-        <span class="text-xs font-semibold tracking-[0.2em] text-gold-500 uppercase">Interactive Showroom</span>
-        <h2 class="text-3xl sm:text-4xl font-serif font-bold">Artisanal Gallery</h2>
+        <span class="text-xs font-semibold tracking-[0.2em] text-gold-400 uppercase">Interactive Showroom</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">Artisanal Gallery</h2>
         <div class="h-1 w-20 bg-gold-400 rounded-full"></div>
       </div>
-      <p class="text-sm text-charcoal-600 dark:text-charcoal-400 max-w-md font-sans leading-relaxed">
+      <p class="text-sm text-charcoal-400 max-w-md font-sans leading-relaxed">
         Click on any piece to inspect details, composition metrics, and custom order guidelines inside our digital lightbox.
       </p>
     </div>
@@ -73,7 +73,7 @@ const galleryItems = [
           data-image={item.image}
         >
           <!-- Image Container -->
-          <div class="h-64 bg-charcoal-200 dark:bg-charcoal-950 flex items-center justify-center relative overflow-hidden w-full">
+          <div class="h-64 bg-charcoal-950 flex items-center justify-center relative overflow-hidden w-full">
             <div class="absolute inset-0 bg-gold-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
             <img 
               src={item.image} 
@@ -81,15 +81,15 @@ const galleryItems = [
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
               loading="lazy" 
             />
-            <span class="absolute top-4 right-4 z-20 px-2.5 py-1 rounded-full bg-charcoal-50/90 dark:bg-charcoal-950/80 border border-gold-400/20 text-[9px] font-bold uppercase tracking-widest text-gold-500 dark:text-gold-300">
+            <span class="absolute top-4 right-4 z-20 px-2.5 py-1 rounded-full bg-charcoal-950/80 border border-gold-400/20 text-[9px] font-bold uppercase tracking-widest text-gold-300">
               {item.category}
             </span>
           </div>
 
           <!-- Bottom Info -->
-          <div class="p-6 space-y-2 flex-grow bg-white/20 dark:bg-charcoal-950/40">
-            <h3 class="font-serif text-lg font-bold group-hover:text-gold-500 transition-colors duration-200">{item.title}</h3>
-            <p class="text-xs text-charcoal-600 dark:text-charcoal-400 line-clamp-2 leading-relaxed">{item.desc}</p>
+          <div class="p-6 space-y-2 flex-grow bg-charcoal-950/40">
+            <h3 class="font-serif text-lg font-bold text-white group-hover:text-gold-400 transition-colors duration-200">{item.title}</h3>
+            <p class="text-xs text-charcoal-400 line-clamp-2 leading-relaxed">{item.desc}</p>
             <span class="text-[10px] font-bold uppercase tracking-wider text-gold-500 group-hover:text-gold-400 flex items-center gap-1.5 pt-2">
               Inspect Piece
               <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
@@ -106,29 +106,29 @@ const galleryItems = [
     
     <div class="relative glass-panel rounded-3xl max-w-2xl w-full overflow-hidden z-10 flex flex-col md:flex-row shadow-gold-glow-lg border border-gold-400/20 max-h-[90vh]">
       <!-- Close Button -->
-      <button id="lightbox-close" type="button" class="absolute top-4 right-4 p-2 text-charcoal-600 dark:text-charcoal-400 hover:text-charcoal-950 dark:hover:text-white rounded-full bg-charcoal-100/60 dark:bg-charcoal-900/60 focus:outline-none focus:ring-2 focus:ring-gold-400 z-30" aria-label="Close details">
+      <button id="lightbox-close" type="button" class="absolute top-4 right-4 p-2 text-charcoal-400 hover:text-white rounded-full bg-charcoal-900/60 focus:outline-none focus:ring-2 focus:ring-gold-400 z-30" aria-label="Close details">
         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
 
       <!-- Image Left Display -->
-      <div class="h-64 md:h-auto md:w-1/2 bg-charcoal-200 dark:bg-charcoal-950 flex items-center justify-center relative overflow-hidden border-b md:border-b-0 md:border-r border-charcoal-200 dark:border-charcoal-800">
+      <div class="h-64 md:h-auto md:w-1/2 bg-charcoal-950 flex items-center justify-center relative overflow-hidden border-b md:border-b-0 md:border-r border-charcoal-800">
         <img id="lightbox-img" src="" alt="" class="w-full h-full object-cover" />
       </div>
 
       <!-- Info Right Content -->
-      <div class="p-8 md:w-1/2 flex flex-col justify-between overflow-y-auto bg-charcoal-50 dark:bg-charcoal-900">
+      <div class="p-8 md:w-1/2 flex flex-col justify-between overflow-y-auto bg-charcoal-900">
         <div class="space-y-4">
-          <span id="lightbox-category" class="text-[10px] font-bold uppercase tracking-widest text-gold-500">Category</span>
-          <h3 id="lightbox-title" class="font-serif text-2xl font-bold">Title</h3>
-          <p id="lightbox-desc" class="text-sm text-charcoal-600 dark:text-charcoal-300 leading-relaxed font-sans">Description</p>
+          <span id="lightbox-category" class="text-[10px] font-bold uppercase tracking-widest text-gold-400">Category</span>
+          <h3 id="lightbox-title" class="font-serif text-2xl font-bold text-white">Title</h3>
+          <p id="lightbox-desc" class="text-sm text-charcoal-300 leading-relaxed font-sans">Description</p>
         </div>
 
-        <div class="pt-8 border-t border-charcoal-200 dark:border-charcoal-800 space-y-4 mt-6">
-          <div class="flex justify-between items-center text-xs text-charcoal-500 dark:text-charcoal-400">
+        <div class="pt-8 border-t border-charcoal-800 space-y-4 mt-6">
+          <div class="flex justify-between items-center text-xs text-charcoal-400">
             <span>Purity Standards:</span>
-            <span class="text-gold-500 dark:text-gold-400 font-semibold">22K / 18K Hallmarked</span>
+            <span class="text-gold-400 font-semibold">22K / 18K Hallmarked</span>
           </div>
           <a href="https://wa.me/919635675556" target="_blank" rel="noopener noreferrer" class="block w-full text-center py-3 rounded-full bg-gold-400 hover:bg-gold-300 text-charcoal-950 font-semibold tracking-wider text-xs uppercase transition-colors">
             Inquire About Design
