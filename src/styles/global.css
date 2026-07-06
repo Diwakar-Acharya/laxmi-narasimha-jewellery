@@ -12,16 +12,16 @@
   --color-gold-800: #523B12;
   --color-gold-900: #35250B;
 
-  --color-charcoal-50: #f6f6f6;
-  --color-charcoal-100: #e7e7e8;
-  --color-charcoal-200: #cfcfd1;
-  --color-charcoal-300: #aaaaaf;
-  --color-charcoal-400: #808088;
+  --color-charcoal-50: #FAF9F6;  /* Soft Warm Cream/Alabaster for Light Mode */
+  --color-charcoal-100: #F0EDE6;
+  --color-charcoal-200: #E6E1D5;
+  --color-charcoal-300: #CDCAAD;
+  --color-charcoal-400: #8C8A79;
   --color-charcoal-500: #62626b;
-  --color-charcoal-600: #4a4a51;
+  --color-charcoal-600: #4A4A51;
   --color-charcoal-700: #333338;
-  --color-charcoal-800: #1b1b1e;
-  --color-charcoal-900: #0a0a0b; /* Obsidian Dark Background */
+  --color-charcoal-800: #1B1B1E;  /* Dark Text/UI for Light Mode */
+  --color-charcoal-900: #0A0A0B;  /* Obsidian Background for Dark Mode */
   
   --font-serif: "Cormorant Garamond", Georgia, serif;
   --font-sans: "Inter", system-ui, sans-serif;
@@ -50,19 +50,33 @@
   }
 }
 
+/* Custom dark mode variant selector for Tailwind v4 */
+@variant dark (.dark &);
+
 @layer base {
   html {
     scroll-behavior: smooth;
     font-family: var(--font-sans);
+    background-color: var(--color-charcoal-50);
+    color: var(--color-charcoal-800);
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  html.dark {
     background-color: var(--color-charcoal-900);
     color: var(--color-charcoal-200);
-    -webkit-font-smoothing: antialiased;
   }
   
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-serif);
-    color: #ffffff;
+    color: var(--color-charcoal-800);
     letter-spacing: -0.025em;
+    transition: color 0.3s ease;
+  }
+
+  html.dark h1, html.dark h2, html.dark h3, html.dark h4, html.dark h5, html.dark h6 {
+    color: #ffffff;
   }
 
   /* Custom high-contrast focus rings for WCAG accessibility */
@@ -76,11 +90,17 @@
     width: 8px;
   }
   ::-webkit-scrollbar-track {
+    background: var(--color-charcoal-100);
+  }
+  html.dark ::-webkit-scrollbar-track {
     background: var(--color-charcoal-900);
   }
   ::-webkit-scrollbar-thumb {
-    background: var(--color-charcoal-700);
+    background: var(--color-charcoal-300);
     border-radius: 4px;
+  }
+  html.dark ::-webkit-scrollbar-thumb {
+    background: var(--color-charcoal-700);
   }
   ::-webkit-scrollbar-thumb:hover {
     background: var(--color-gold-500);
@@ -89,25 +109,31 @@
 
 /* Glassmorphism panel utility */
 @utility glass-panel {
-  background: rgba(27, 27, 30, 0.7);
+  background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  
+  .dark & {
+    background: rgba(27, 27, 30, 0.7);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+  }
 }
 
 /* Subtle premium border animation */
 @utility gold-border-hover {
-  border-color: rgba(212, 175, 55, 0.1);
+  border-color: rgba(212, 175, 55, 0.15);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
-    border-color: rgba(212, 175, 55, 0.4);
+    border-color: rgba(212, 175, 55, 0.5);
     box-shadow: var(--shadow-gold-glow);
   }
 }
 
 /* Gold text gradient shine */
 @utility gold-text-gradient {
-  background: linear-gradient(135deg, #F7F1D0 0%, #D4AF37 50%, #B89329 100%);
+  background: linear-gradient(135deg, #E2CA6B 0%, #D4AF37 50%, #B89329 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

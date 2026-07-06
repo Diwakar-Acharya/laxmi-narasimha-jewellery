@@ -2,7 +2,7 @@
 import { businessConfig } from '../data/config';
 ---
 
-<section id="about" class="py-24 bg-charcoal-900 relative overflow-hidden">
+<section id="about" class="py-24 bg-charcoal-50 dark:bg-charcoal-900 transition-colors duration-300 relative overflow-hidden">
   <!-- Accent lights -->
   <div class="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
     <div class="absolute top-[40%] right-[-10%] w-[35vw] h-[35vw] rounded-full bg-gold-500/5 blur-[100px]"></div>
@@ -12,92 +12,84 @@ import { businessConfig } from '../data/config';
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
       
       <!-- Graphic/Text Side -->
-      <div class="lg:col-span-6 space-y-8">
+      <div class="lg:col-span-5 space-y-6">
         <div class="space-y-3">
-          <span class="text-xs font-semibold tracking-[0.2em] text-gold-400 uppercase">Our Legacy</span>
-          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white leading-tight">
-            Crafting Elegance, <br class="hidden sm:inline" />
+          <span class="text-xs font-semibold tracking-[0.2em] text-gold-500 uppercase">Our Legacy</span>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold leading-tight">
+            Crafting Elegance, <br />
             Preserving Purity
           </h2>
         </div>
 
-        <p class="text-charcoal-300 leading-relaxed font-sans text-sm sm:text-base">
-          At Sri Laxmi Narasimha Jewellery, every ornament is a marriage of time-tested heritage and contemporary aesthetics. From bridal wedding sets to minimal day-wear coordinates, we sculpt precious metals and certified gemstones with precision, dedication, and complete transparency.
+        <p class="text-charcoal-600 dark:text-charcoal-300 leading-relaxed font-sans text-sm sm:text-base">
+          At Sri Laxmi Narasimha Jewellery, every ornament is a marriage of time-tested heritage and contemporary aesthetics. We sculpt certified gold, diamonds, and precious gemstones with complete transparency.
         </p>
 
-        <p class="text-charcoal-300 leading-relaxed font-sans text-sm sm:text-base">
-          Our products undergo strict testing to ensure compliance with Indian and international purity guidelines. We believe that buying jewelry is not just an acquisition of capital, but an emotional heirloom to be passed down through generations.
-        </p>
-
+        <!-- Metric highlights -->
         <div class="flex items-center gap-6 pt-4">
           <div class="flex flex-col">
-            <span class="text-3xl font-serif font-bold text-gold-400">100%</span>
-            <span class="text-xs uppercase tracking-wider text-charcoal-400">BIS Hallmarked</span>
+            <span class="text-3xl font-serif font-bold text-gold-500">100%</span>
+            <span class="text-[10px] uppercase tracking-wider text-charcoal-500 dark:text-charcoal-400">BIS Hallmarked</span>
           </div>
-          <div class="h-10 w-[1px] bg-charcoal-800"></div>
+          <div class="h-10 w-[1px] bg-charcoal-200 dark:bg-charcoal-800"></div>
           <div class="flex flex-col">
-            <span class="text-3xl font-serif font-bold text-gold-400">Certified</span>
-            <span class="text-xs uppercase tracking-wider text-charcoal-400">Gems & Diamonds</span>
-          </div>
-          <div class="h-10 w-[1px] bg-charcoal-800"></div>
-          <div class="flex flex-col">
-            <span class="text-3xl font-serif font-bold text-gold-400">Custom</span>
-            <span class="text-xs uppercase tracking-wider text-charcoal-400">Bespoke Design</span>
+            <span class="text-3xl font-serif font-bold text-gold-500">Certified</span>
+            <span class="text-[10px] uppercase tracking-wider text-charcoal-500 dark:text-charcoal-400">Gems & Diamonds</span>
           </div>
         </div>
       </div>
 
       <!-- Feature Grid Cards Side -->
-      <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
         <!-- Card 1 -->
-        <div class="glass-panel p-8 rounded-2xl gold-border-hover space-y-4">
-          <div class="w-12 h-12 rounded-xl bg-gold-400/10 border border-gold-400/20 flex items-center justify-center text-gold-400">
+        <div class="glass-panel p-8 rounded-3xl gold-border-hover space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-gold-400/10 border border-gold-400/20 flex items-center justify-center text-gold-500">
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
           </div>
-          <h3 class="text-lg font-serif font-semibold text-white">Absolute Purity</h3>
-          <p class="text-xs text-charcoal-400 leading-relaxed">
-            Every gram of gold we offer carries the official government BIS Hallmark, guaranteeing exact karat purity.
+          <h3 class="text-lg font-serif font-bold">Absolute Purity</h3>
+          <p class="text-xs text-charcoal-600 dark:text-charcoal-400 leading-relaxed">
+            Every gram carries official government BIS Hallmark stamps, guaranteeing exact karat purity.
           </p>
         </div>
 
         <!-- Card 2 -->
-        <div class="glass-panel p-8 rounded-2xl gold-border-hover space-y-4">
-          <div class="w-12 h-12 rounded-xl bg-gold-400/10 border border-gold-400/20 flex items-center justify-center text-gold-400">
+        <div class="glass-panel p-8 rounded-3xl gold-border-hover space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-gold-400/10 border border-gold-400/20 flex items-center justify-center text-gold-500">
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 9H3m15.364-3.636l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707-.707M12 5a7 7 0 100 14 7 7 0 000-14z" />
             </svg>
           </div>
-          <h3 class="text-lg font-serif font-semibold text-white">Bespoke Fitting</h3>
-          <p class="text-xs text-charcoal-400 leading-relaxed">
-            Collaborate directly with our master designers to craft custom necklaces, rings, and sets customized to your taste.
+          <h3 class="text-lg font-serif font-bold">Bespoke Design</h3>
+          <p class="text-xs text-charcoal-600 dark:text-charcoal-400 leading-relaxed">
+            Collaborate directly with our master craftsmen to create rings and necklaces customized to your style.
           </p>
         </div>
 
         <!-- Card 3 -->
-        <div class="glass-panel p-8 rounded-2xl gold-border-hover space-y-4">
-          <div class="w-12 h-12 rounded-xl bg-gold-400/10 border border-gold-400/20 flex items-center justify-center text-gold-400">
+        <div class="glass-panel p-8 rounded-3xl gold-border-hover space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-gold-400/10 border border-gold-400/20 flex items-center justify-center text-gold-500">
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
             </svg>
           </div>
-          <h3 class="text-lg font-serif font-semibold text-white">Transparent Pricing</h3>
-          <p class="text-xs text-charcoal-400 leading-relaxed">
-            Enjoy crystal-clear invoicing with detailed breakups of gold weights, gemstone values, and making charges.
+          <h3 class="text-lg font-serif font-bold">Transparent Pricing</h3>
+          <p class="text-xs text-charcoal-600 dark:text-charcoal-400 leading-relaxed">
+            Clear invoices detailing precise metal weights, making charges, and gem valuations.
           </p>
         </div>
 
         <!-- Card 4 -->
-        <div class="glass-panel p-8 rounded-2xl gold-border-hover space-y-4">
-          <div class="w-12 h-12 rounded-xl bg-gold-400/10 border border-gold-400/20 flex items-center justify-center text-gold-400">
+        <div class="glass-panel p-8 rounded-3xl gold-border-hover space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-gold-400/10 border border-gold-400/20 flex items-center justify-center text-gold-500">
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
-          <h3 class="text-lg font-serif font-semibold text-white">Exchange Guarantees</h3>
-          <p class="text-xs text-charcoal-400 leading-relaxed">
-            Flexible buybacks, structural polishing, and lifetime exchange assurances on all diamond jewelry purchases.
+          <h3 class="text-lg font-serif font-bold">Exchange Assurances</h3>
+          <p class="text-xs text-charcoal-600 dark:text-charcoal-400 leading-relaxed">
+            Lifetime buybacks, structural cleaning, and certified polishing for all purchases.
           </p>
         </div>
       </div>

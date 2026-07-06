@@ -2,7 +2,7 @@
 import { businessConfig } from '../data/config';
 ---
 
-<footer class="bg-charcoal-950 border-t border-charcoal-800 text-charcoal-400 py-16">
+<footer class="bg-charcoal-100 dark:bg-charcoal-950 border-t border-charcoal-200 dark:border-charcoal-800 text-charcoal-600 dark:text-charcoal-400 py-16 transition-colors duration-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
       <!-- Brand Profile -->
@@ -12,65 +12,65 @@ import { businessConfig } from '../data/config';
             <span class="font-serif font-semibold text-lg text-gold-400">LN</span>
           </div>
           <div class="flex flex-col">
-            <span class="font-serif font-bold text-sm tracking-widest text-white uppercase">LAXMI NARASIMHA</span>
-            <span class="text-[9px] tracking-[0.25em] text-gold-400 font-semibold uppercase">Jewellery</span>
+            <span class="font-serif font-bold text-sm tracking-widest text-charcoal-800 dark:text-white uppercase">LAXMI NARASIMHA</span>
+            <span class="text-[9px] tracking-[0.25em] text-gold-500 dark:text-gold-400 font-semibold uppercase">Jewellery</span>
           </div>
         </div>
-        <p class="text-sm max-w-sm leading-relaxed text-charcoal-300">
-          Crafting fine heritage ornaments and contemporary masterworks with unmatched purity, precision, and trust. Located in the heart of Kharagpur.
+        <p class="text-sm max-w-sm leading-relaxed text-charcoal-600 dark:text-charcoal-300">
+          Crafting fine heritage ornaments and contemporary masterworks with purity, precision, and trust. Located in the heart of Kharagpur.
         </p>
       </div>
 
       <!-- Quick Navigation -->
       <div>
-        <h3 class="text-sm font-semibold uppercase tracking-wider text-white mb-6">Quick Links</h3>
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-charcoal-800 dark:text-white mb-6">Quick Links</h3>
         <ul class="space-y-4 text-sm">
-          <li><a href="#hero" class="hover:text-gold-400 transition-colors">Home</a></li>
-          <li><a href="#about" class="hover:text-gold-400 transition-colors">About Us</a></li>
-          <li><a href="#collections" class="hover:text-gold-400 transition-colors">Collections</a></li>
-          <li><a href="#gallery" class="hover:text-gold-400 transition-colors">Gallery</a></li>
-          <li><a href="#testimonials" class="hover:text-gold-400 transition-colors">Reviews</a></li>
+          <li><a href="#hero" class="hover:text-gold-500 dark:hover:text-gold-400 transition-colors">Home</a></li>
+          <li><a href="#about" class="hover:text-gold-500 dark:hover:text-gold-400 transition-colors">About Us</a></li>
+          <li><a href="#collections" class="hover:text-gold-500 dark:hover:text-gold-400 transition-colors">Collections</a></li>
+          <li><a href="#gallery" class="hover:text-gold-500 dark:hover:text-gold-400 transition-colors">Gallery</a></li>
+          <li><a href="#testimonials" class="hover:text-gold-500 dark:hover:text-gold-400 transition-colors">Reviews</a></li>
         </ul>
       </div>
 
       <!-- Contact Info -->
       <div>
-        <h3 class="text-sm font-semibold uppercase tracking-wider text-white mb-6">Showroom Info</h3>
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-charcoal-800 dark:text-white mb-6">Showroom Info</h3>
         <ul class="space-y-4 text-sm">
           <li class="flex items-start gap-3">
-            <svg class="h-5 w-5 text-gold-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg class="h-5 w-5 text-gold-500 dark:text-gold-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
-            <span class="leading-relaxed text-charcoal-300">
+            <span class="leading-relaxed text-charcoal-600 dark:text-charcoal-300">
               Shop No: V-28, Gate Bazar, Main Road, New Settlement, Kharagpur, West Bengal 721301
             </span>
           </li>
           <li class="flex items-center gap-3">
-            <svg class="h-5 w-5 text-gold-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg class="h-5 w-5 text-gold-500 dark:text-gold-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
-            <a href={`tel:${businessConfig.phone}`} class="hover:text-gold-400 text-charcoal-300 transition-colors">{businessConfig.phoneFormatted}</a>
+            <a href={`tel:${businessConfig.phone}`} class="hover:text-gold-500 dark:hover:text-gold-400 text-charcoal-600 dark:text-charcoal-300 transition-colors">{businessConfig.phoneFormatted}</a>
           </li>
           <li class="flex items-center gap-3">
-            <svg class="h-5 w-5 text-gold-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg class="h-5 w-5 text-gold-500 dark:text-gold-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <span class="text-charcoal-300">{businessConfig.openingHours}</span>
+            <span class="text-charcoal-600 dark:text-charcoal-300">{businessConfig.openingHours}</span>
           </li>
         </ul>
       </div>
     </div>
 
     <!-- Divider & Bottom Info -->
-    <div class="mt-16 pt-8 border-t border-charcoal-800 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-charcoal-500">
+    <div class="mt-16 pt-8 border-t border-charcoal-200 dark:border-charcoal-800 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-charcoal-500">
       <div>
         <p>&copy; {new Date().getFullYear()} {businessConfig.name}. All Rights Reserved.</p>
         <p class="mt-1 text-[10px]">Sample preview page created for review. Real business details are proprietary to the client.</p>
       </div>
       <div class="flex gap-6">
-        <a href="#" class="hover:text-gold-400 transition-colors">Privacy Policy</a>
-        <a href="#" class="hover:text-gold-400 transition-colors">Terms of Service</a>
+        <a href="#" class="hover:text-gold-500 dark:hover:text-gold-400 transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-gold-500 dark:hover:text-gold-400 transition-colors">Terms of Service</a>
       </div>
     </div>
   </div>

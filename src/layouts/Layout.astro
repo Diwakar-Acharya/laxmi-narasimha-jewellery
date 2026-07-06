@@ -70,6 +70,21 @@ const schemaJson = JSON.stringify({
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={`${businessConfig.siteUrl}/og-image.svg`} />
 
+    <!-- Theme script to prevent flash -->
+    <script is:inline>
+      const getTheme = () => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+        return 'dark';
+      };
+      if (getTheme() === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json" set:html={schemaJson} />
   </head>
