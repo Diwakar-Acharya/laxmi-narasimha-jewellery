@@ -1,0 +1,79 @@
+---
+import '../styles/global.css';
+import '@fontsource/cormorant-garamond/400.css';
+import '@fontsource/cormorant-garamond/600.css';
+import '@fontsource/cormorant-garamond/700.css';
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
+import '@fontsource/inter/700.css';
+
+import { businessConfig } from '../data/config';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = businessConfig.name, 
+  description = businessConfig.description 
+} = Astro.props;
+
+// Structured data for SEO (Only facts, no fake reviews)
+const schemaJson = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "JewelryStore",
+  "name": businessConfig.name,
+  "telephone": businessConfig.phoneFormatted,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "SHOP NO:V-28, Gate Bazar, MAIN ROAD, New Settlement",
+    "addressLocality": "Kharagpur",
+    "addressRegion": "West Bengal",
+    "postalCode": "721301",
+    "addressCountry": "IN"
+  },
+  "url": businessConfig.siteUrl,
+  "openingHours": "Mo-Su 10:30-21:00"
+});
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    
+    <!-- SEO Safety Toggle (Noindex on staging/preview by default) -->
+    {businessConfig.isPreview && (
+      <meta name="robots" content="noindex, nofollow" />
+    )}
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={businessConfig.siteUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={`${businessConfig.siteUrl}/og-image.svg`} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={businessConfig.siteUrl} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={`${businessConfig.siteUrl}/og-image.svg`} />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json" set:html={schemaJson} />
+  </head>
+  <body class="bg-charcoal-900 text-charcoal-200 min-h-screen flex flex-col selection:bg-gold-400 selection:text-charcoal-900">
+    <slot />
+  </body>
+</html>

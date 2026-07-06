@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../sections/Hero.astro';
+import About from '../sections/About.astro';
+import Collections from '../sections/Collections.astro';
+import Gallery from '../sections/Gallery.astro';
+import Testimonials from '../sections/Testimonials.astro';
+import Location from '../sections/Location.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+  <!-- Navigation -->
+  <Navbar />
+
+  <!-- Page Content -->
+  <main class="flex-grow">
+    <Hero />
+    <About />
+    <Collections />
+    <Gallery />
+    <Testimonials />
+    <Location />
+  </main>
+
+  <!-- Footer -->
+  <Footer />
+</Layout>

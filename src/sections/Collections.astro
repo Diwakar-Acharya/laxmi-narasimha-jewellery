@@ -1,0 +1,149 @@
+---
+import { businessConfig } from '../data/config';
+---
+
+<section id="collections" class="py-24 bg-charcoal-950 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- Header -->
+    <div class="text-center space-y-4 mb-16">
+      <span class="text-xs font-semibold tracking-[0.2em] text-gold-400 uppercase">Curated Portfolios</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white">Signature Collections</h2>
+      <div class="h-1 w-20 bg-gold-400 mx-auto rounded-full"></div>
+      <p class="text-sm text-charcoal-400 max-w-lg mx-auto font-sans leading-relaxed">
+        Explore our handpicked portfolios representing the peak of design innovation, cultural heritage, and sheer luxury.
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      
+      <!-- Card 1: Bridal -->
+      <div class="group relative rounded-3xl overflow-hidden glass-panel border border-gold-400/10 flex flex-col h-[420px] transition-all duration-300 hover:border-gold-400/30 hover:shadow-gold-glow">
+        <!-- Visual Presentation / SVG Graphic -->
+        <div class="h-56 bg-charcoal-900 flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform duration-300">
+          <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 to-transparent opacity-80"></div>
+          <!-- Bridal Necklace Vector Drawing -->
+          <svg class="w-36 h-36 text-gold-400/80 drop-shadow-[0_0_12px_rgba(212,175,55,0.3)]" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.2">
+            <!-- Center neck arc -->
+            <path d="M25,25 Q50,60 75,25" />
+            <path d="M20,25 Q50,70 80,25" stroke-dasharray="1 2" />
+            <!-- Hanging beads -->
+            <circle cx="50" cy="65" r="4" fill="currentColor" />
+            <circle cx="40" cy="59" r="3" fill="currentColor" />
+            <circle cx="60" cy="59" r="3" fill="currentColor" />
+            <circle cx="30" cy="49" r="2.5" fill="currentColor" />
+            <circle cx="70" cy="49" r="2.5" fill="currentColor" />
+            <!-- Connecting detail -->
+            <path d="M50,10 L50,25" />
+            <path d="M40,15 L40,25" />
+            <path d="M60,15 L60,25" />
+          </svg>
+        </div>
+        <!-- Card Text -->
+        <div class="p-6 flex-grow flex flex-col justify-between">
+          <div>
+            <h3 class="font-serif text-xl font-bold text-white mb-2">Bridal Heritage</h3>
+            <p class="text-xs text-charcoal-400 leading-relaxed font-sans">
+              Grand Choker sets, intricate Jhumkas, and heavy gold waistbands sculpted for Indian brides.
+            </p>
+          </div>
+          <a href={businessConfig.whatsappLink} class="text-[10px] uppercase font-bold tracking-wider text-gold-400 group-hover:text-gold-300 flex items-center gap-2 mt-4">
+            Request Catalogue
+            <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" /></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2: Diamonds -->
+      <div class="group relative rounded-3xl overflow-hidden glass-panel border border-gold-400/10 flex flex-col h-[420px] transition-all duration-300 hover:border-gold-400/30 hover:shadow-gold-glow">
+        <div class="h-56 bg-charcoal-900 flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform duration-300">
+          <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 to-transparent opacity-80"></div>
+          <!-- Brilliant Diamond Geometric SVG -->
+          <svg class="w-36 h-36 text-gold-400/80 drop-shadow-[0_0_12px_rgba(212,175,55,0.3)]" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1">
+            <!-- Diamond Top facet -->
+            <polygon points="25,30 75,30 63,55 37,55" />
+            <!-- Side triangles -->
+            <polygon points="25,30 37,55 12,50" />
+            <polygon points="75,30 63,55 88,50" />
+            <!-- Bottom point -->
+            <polygon points="37,55 63,55 50,85" />
+            <polygon points="12,50 37,55 50,85" />
+            <polygon points="88,50 63,55 50,85" />
+            <!-- Shine sparkles -->
+            <path d="M 80 15 L 85 20 M 80 20 L 85 15" stroke-width="1.5" />
+            <path d="M 15 70 L 20 75 M 15 75 L 20 70" stroke-width="1.5" />
+          </svg>
+        </div>
+        <div class="p-6 flex-grow flex flex-col justify-between">
+          <div>
+            <h3 class="font-serif text-xl font-bold text-white mb-2">Diamond Solitaires</h3>
+            <p class="text-xs text-charcoal-400 leading-relaxed font-sans">
+              IGI certified diamonds, custom engagement rings, and brilliant bangles with zero light leak.
+            </p>
+          </div>
+          <a href={businessConfig.whatsappLink} class="text-[10px] uppercase font-bold tracking-wider text-gold-400 group-hover:text-gold-300 flex items-center gap-2 mt-4">
+            Request Catalogue
+            <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" /></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3: Antique -->
+      <div class="group relative rounded-3xl overflow-hidden glass-panel border border-gold-400/10 flex flex-col h-[420px] transition-all duration-300 hover:border-gold-400/30 hover:shadow-gold-glow">
+        <div class="h-56 bg-charcoal-900 flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform duration-300">
+          <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 to-transparent opacity-80"></div>
+          <!-- Antique Ring SVG -->
+          <svg class="w-36 h-36 text-gold-400/80 drop-shadow-[0_0_12px_rgba(212,175,55,0.3)]" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.2">
+            <!-- Ring Band -->
+            <circle cx="50" cy="55" r="22" />
+            <circle cx="50" cy="55" r="25" />
+            <!-- Ring Crown setting -->
+            <rect x="42" y="24" width="16" height="8" rx="2" fill="currentColor" />
+            <circle cx="50" cy="20" r="7" />
+            <circle cx="50" cy="20" r="3" fill="currentColor" />
+          </svg>
+        </div>
+        <div class="p-6 flex-grow flex flex-col justify-between">
+          <div>
+            <h3 class="font-serif text-xl font-bold text-white mb-2">Antique & Nakshi</h3>
+            <p class="text-xs text-charcoal-400 leading-relaxed font-sans">
+              Hand-carved temple jewelry, antique matte finishes, and heritage gemstone arrangements.
+            </p>
+          </div>
+          <a href={businessConfig.whatsappLink} class="text-[10px] uppercase font-bold tracking-wider text-gold-400 group-hover:text-gold-300 flex items-center gap-2 mt-4">
+            Request Catalogue
+            <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" /></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 4: Daily -->
+      <div class="group relative rounded-3xl overflow-hidden glass-panel border border-gold-400/10 flex flex-col h-[420px] transition-all duration-300 hover:border-gold-400/30 hover:shadow-gold-glow">
+        <div class="h-56 bg-charcoal-900 flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform duration-300">
+          <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 to-transparent opacity-80"></div>
+          <!-- Minimal Bracelet SVG -->
+          <svg class="w-36 h-36 text-gold-400/80 drop-shadow-[0_0_12px_rgba(212,175,55,0.3)]" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.2">
+            <!-- Modern interlocked bands -->
+            <ellipse cx="40" cy="50" rx="20" ry="10" transform="rotate(-15 40 50)" />
+            <ellipse cx="60" cy="50" rx="20" ry="10" transform="rotate(15 60 50)" />
+            <!-- Star accents -->
+            <polygon points="50,30 52,35 57,35 53,38 55,43 50,40 45,43 47,38 43,35 48,35" fill="currentColor" />
+          </svg>
+        </div>
+        <div class="p-6 flex-grow flex flex-col justify-between">
+          <div>
+            <h3 class="font-serif text-xl font-bold text-white mb-2">Contemporary Gold</h3>
+            <p class="text-xs text-charcoal-400 leading-relaxed font-sans">
+              Lightweight elegant chains, stackable bands, and minimal designs perfect for modern professionals.
+            </p>
+          </div>
+          <a href={businessConfig.whatsappLink} class="text-[10px] uppercase font-bold tracking-wider text-gold-400 group-hover:text-gold-300 flex items-center gap-2 mt-4">
+            Request Catalogue
+            <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" /></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

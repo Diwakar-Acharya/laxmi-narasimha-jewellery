@@ -1,0 +1,187 @@
+---
+const testimonials = [
+  {
+    initials: "DK",
+    name: "A satisfied client",
+    role: "Wedding Jewellery Buyer",
+    quote: "The attention to detail on our bridal necklace set was extraordinary. We received custom drawings, weight certificates, and regular photo updates during fabrication.",
+    stars: 5,
+  },
+  {
+    initials: "SA",
+    name: "A local customer",
+    role: "Regular gold customer",
+    quote: "Very reliable shop in Kharagpur Gate Bazar. I bought my wedding ornaments here, and they verified the hallmark of every piece under a testing loop before packing.",
+    stars: 5,
+  },
+  {
+    initials: "RM",
+    name: "Bespoke collector",
+    role: "Custom Diamond Ring buyer",
+    quote: "They customized an engagement ring starting from a loose solitaire diamond. The setting is clean, and the diamond brilliance is phenomenal. Professional pricing throughout.",
+    stars: 5,
+  }
+];
+---
+
+<section id="testimonials" class="py-24 bg-charcoal-950 relative overflow-hidden">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- Header -->
+    <div class="text-center space-y-4 mb-16">
+      <span class="text-xs font-semibold tracking-[0.2em] text-gold-400 uppercase">Customer Sentiment</span>
+      <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">Guest Reviews</h2>
+      <div class="h-1 w-20 bg-gold-400 mx-auto rounded-full"></div>
+      
+      <!-- Staging Sample Notice Badge (Honest Handling Policy) -->
+      <div class="inline-block mt-3 px-3 py-1 rounded-md bg-charcoal-900 border border-charcoal-800 text-[10px] text-charcoal-400 font-medium">
+        ⚠️ Representative samples for preview purposes. Actual client references will be added on launch.
+      </div>
+    </div>
+
+    <!-- Carousel Container -->
+    <div class="relative" id="carousel-wrapper">
+      <div class="overflow-hidden">
+        <div id="carousel-track" class="flex transition-transform duration-500 ease-out" style="transform: translateX(0%);">
+          {testimonials.map((item, idx) => (
+            <div class="w-full shrink-0 px-2 sm:px-4" role="group" aria-roledescription="slide" aria-label={`Slide ${idx + 1} of ${testimonials.length}`}>
+              <div class="glass-panel p-8 sm:p-12 rounded-3xl space-y-6 max-w-3xl mx-auto border border-gold-400/10">
+                <!-- Stars -->
+                <div class="flex gap-1 text-gold-400" aria-label={`Rating: ${item.stars} out of 5 stars`}>
+                  {Array.from({ length: item.stars }).map(() => (
+                    <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+
+                <!-- Quote text -->
+                <blockquote class="text-base sm:text-lg text-charcoal-200 italic leading-relaxed font-serif">
+                  "{item.quote}"
+                </blockquote>
+
+                <!-- Author Profile -->
+                <div class="flex items-center gap-4">
+                  <!-- Monogram Avatar -->
+                  <div class="w-12 h-12 rounded-full bg-gold-400/10 border border-gold-400/20 flex items-center justify-center text-gold-400 font-serif font-bold text-sm">
+                    {item.initials}
+                  </div>
+                  <div>
+                    <cite class="text-sm font-semibold text-white not-italic block">{item.name}</cite>
+                    <span class="text-xs text-charcoal-400">{item.role}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Controls Row -->
+      <div class="flex justify-center items-center gap-6 mt-10">
+        <!-- Previous -->
+        <button id="carousel-prev" type="button" class="p-3 rounded-full border border-charcoal-800 hover:border-gold-400/50 text-charcoal-300 hover:text-gold-400 transition-colors focus:outline-none" aria-label="Previous review">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+
+        <!-- Play/Pause Control (Accessibility requirement) -->
+        <button id="carousel-toggle-play" type="button" class="text-xs font-semibold uppercase tracking-wider text-charcoal-400 hover:text-gold-400 transition-colors focus:outline-none" aria-label="Pause review rotation">
+          Pause Auto-Play
+        </button>
+
+        <!-- Next -->
+        <button id="carousel-next" type="button" class="p-3 rounded-full border border-charcoal-800 hover:border-gold-400/50 text-charcoal-300 hover:text-gold-400 transition-colors focus:outline-none" aria-label="Next review">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  let currentIndex = 0;
+  let isPlaying = true;
+  let intervalId: any = null;
+  const slideCount = 3; // 3 slides
+
+  const track = document.getElementById('carousel-track');
+  const prevBtn = document.getElementById('carousel-prev');
+  const nextBtn = document.getElementById('carousel-next');
+  const togglePlayBtn = document.getElementById('carousel-toggle-play');
+  const carouselWrapper = document.getElementById('carousel-wrapper');
+
+  // Query prefers-reduced-motion
+  const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  
+  const updateSlide = (index: number) => {
+    currentIndex = (index + slideCount) % slideCount;
+    if (track) {
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+  };
+
+  const nextSlide = () => {
+    updateSlide(currentIndex + 1);
+  };
+
+  const prevSlide = () => {
+    updateSlide(currentIndex - 1);
+  };
+
+  // Start auto-play
+  const startAutoplay = () => {
+    if (mediaQuery.matches) return; // Never auto-advance on reduced motion
+    
+    clearInterval(intervalId);
+    intervalId = setInterval(nextSlide, 5000);
+    isPlaying = true;
+    if (togglePlayBtn) togglePlayBtn.textContent = 'Pause Auto-Play';
+  };
+
+  // Pause auto-play
+  const stopAutoplay = () => {
+    clearInterval(intervalId);
+    isPlaying = false;
+    if (togglePlayBtn) togglePlayBtn.textContent = 'Start Auto-Play';
+  };
+
+  prevBtn?.addEventListener('click', () => {
+    prevSlide();
+    stopAutoplay();
+  });
+
+  nextBtn?.addEventListener('click', () => {
+    nextSlide();
+    stopAutoplay();
+  });
+
+  togglePlayBtn?.addEventListener('click', () => {
+    if (isPlaying) {
+      stopAutoplay();
+    } else {
+      startAutoplay();
+    }
+  });
+
+  // Pause auto-play on mouse enter or focus inside element (accessibility requirement)
+  carouselWrapper?.addEventListener('mouseenter', stopAutoplay);
+  carouselWrapper?.addEventListener('mouseleave', () => {
+    if (!isPlaying && togglePlayBtn?.textContent === 'Pause Auto-Play') {
+      startAutoplay();
+    }
+  });
+  carouselWrapper?.addEventListener('focusin', stopAutoplay);
+
+  // Initialize
+  startAutoplay();
+
+  // Handle prefers-reduced-motion changes dynamically
+  mediaQuery.addEventListener('change', () => {
+    if (mediaQuery.matches) {
+      stopAutoplay();
+    }
+  });
+</script>

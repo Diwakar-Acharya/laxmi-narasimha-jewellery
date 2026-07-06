@@ -1,0 +1,109 @@
+---
+import { businessConfig } from '../data/config';
+---
+
+<header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-transparent">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+      <!-- Logo / Brand Wordmark -->
+      <a href="#" class="flex items-center gap-3 group" aria-label="Sri Laxmi Narasimha Jewellery Home">
+        <!-- Luxury Gold Monogram Symbol -->
+        <div class="w-10 h-10 rounded-full border-2 border-gold-400 flex items-center justify-center bg-charcoal-900 shadow-gold-glow transition-all duration-300 group-hover:scale-105 group-hover:border-gold-300">
+          <span class="font-serif font-semibold text-lg text-gold-400 group-hover:text-gold-300">LN</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif font-bold text-sm tracking-widest text-white leading-none sm:text-base">LAXMI NARASIMHA</span>
+          <span class="text-[9px] tracking-[0.25em] text-gold-400 font-semibold uppercase leading-tight">Jewellery</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-8" aria-label="Desktop Navigation">
+        <a href="#hero" class="text-sm font-medium text-charcoal-200 hover:text-white transition-colors duration-200 py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-400 after:transition-all after:duration-300 hover:after:w-full">Home</a>
+        <a href="#about" class="text-sm font-medium text-charcoal-200 hover:text-white transition-colors duration-200 py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-400 after:transition-all after:duration-300 hover:after:w-full">About</a>
+        <a href="#collections" class="text-sm font-medium text-charcoal-200 hover:text-white transition-colors duration-200 py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-400 after:transition-all after:duration-300 hover:after:w-full">Collections</a>
+        <a href="#gallery" class="text-sm font-medium text-charcoal-200 hover:text-white transition-colors duration-200 py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-400 after:transition-all after:duration-300 hover:after:w-full">Gallery</a>
+        <a href="#testimonials" class="text-sm font-medium text-charcoal-200 hover:text-white transition-colors duration-200 py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-400 after:transition-all after:duration-300 hover:after:w-full">Reviews</a>
+        <a href="#location" class="text-sm font-medium text-charcoal-200 hover:text-white transition-colors duration-200 py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gold-400 after:transition-all after:duration-300 hover:after:w-full">Visit Us</a>
+      </nav>
+
+      <!-- Desktop Call To Action -->
+      <div class="hidden md:flex items-center">
+        <a href={businessConfig.whatsappLink} target="_blank" rel="noopener noreferrer" class="relative group overflow-hidden px-5 py-2.5 rounded-full border border-gold-400 text-gold-400 text-xs font-semibold uppercase tracking-wider transition-all duration-300 hover:text-charcoal-900">
+          <span class="absolute inset-0 bg-gold-400 scale-x-0 origin-right transition-transform duration-300 group-hover:scale-x-100 group-hover:origin-left -z-10"></span>
+          Book Consultation
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" type="button" class="md:hidden p-2 text-charcoal-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-gold-400 rounded-lg" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle Navigation Menu">
+        <svg id="menu-icon" class="h-6 w-6 block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="close-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-b border-charcoal-800 bg-charcoal-950 px-4 pt-2 pb-6 space-y-3 transition-all duration-300 ease-in-out">
+    <a href="#hero" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-charcoal-200 hover:bg-charcoal-800 hover:text-white">Home</a>
+    <a href="#about" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-charcoal-200 hover:bg-charcoal-800 hover:text-white">About</a>
+    <a href="#collections" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-charcoal-200 hover:bg-charcoal-800 hover:text-white">Collections</a>
+    <a href="#gallery" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-charcoal-200 hover:bg-charcoal-800 hover:text-white">Gallery</a>
+    <a href="#testimonials" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-charcoal-200 hover:bg-charcoal-800 hover:text-white">Reviews</a>
+    <a href="#location" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-charcoal-200 hover:bg-charcoal-800 hover:text-white">Visit Us</a>
+    <div class="pt-4 border-t border-charcoal-800">
+      <a href={businessConfig.whatsappLink} target="_blank" rel="noopener noreferrer" class="block w-full text-center px-4 py-3 rounded-full bg-gold-400 text-charcoal-900 text-sm font-semibold uppercase tracking-wider hover:bg-gold-300 transition-colors">
+        Book Consultation
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const header = document.getElementById('main-header');
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeIcon = document.getElementById('close-icon');
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+  // Change background on scroll (contrast protection)
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      header?.classList.add('glass-panel', 'border-charcoal-800/50');
+      header?.classList.remove('border-transparent');
+    } else {
+      header?.classList.remove('glass-panel', 'border-charcoal-800/50');
+      header?.classList.add('border-transparent');
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  // Run on load too
+  handleScroll();
+
+  // Mobile menu toggle
+  const toggleMobileMenu = () => {
+    const isExpanded = mobileMenuBtn?.getAttribute('aria-expanded') === 'true';
+    mobileMenuBtn?.setAttribute('aria-expanded', (!isExpanded).toString());
+    mobileMenu?.classList.toggle('hidden');
+    menuIcon?.classList.toggle('hidden');
+    closeIcon?.classList.toggle('hidden');
+  };
+
+  mobileMenuBtn?.addEventListener('click', toggleMobileMenu);
+
+  // Close mobile drawer when clicking a link
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.add('hidden');
+      menuIcon?.classList.remove('hidden');
+      closeIcon?.classList.add('hidden');
+      mobileMenuBtn?.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
